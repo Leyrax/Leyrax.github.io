@@ -1,1 +1,410 @@
-gpu.html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Видеокарты</title>
+	<link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		nav {
+			border-bottom: 1px solid;
+			padding-bottom: 5px;
+			display: flex;
+			width: 100% !important;
+			height: 41px auto;
+			line-height: 0.8em;
+			background: #fafafa;
+			padding-top: 5px;
+		}
+		ul li {
+			display: inline-flex;
+			padding-right: 20px;
+			padding-top: 5px;
+		}
+		a {
+			color: #707070;
+			text-decoration: none;
+			transition: .5s;
+		}
+		li:nth-child(1) {
+			padding-left: 240px;
+		}
+		li {
+			padding-right: 20px;
+		}
+		a:hover {
+			color: silver;
+			transition: 0.1s;
+		}
+		main {
+			height: auto;
+			padding-left: 240px;
+			padding-right: 240px; 
+			display: block;
+			z-index: 200;
+		}
+		ul li img {
+			width: 15px;
+			height: 15px;
+			padding-bottom: 10px;
+			padding-right: 5px;
+		}
+		li a {
+			font-size: 15px;
+		}
+		.folder {
+			font-size: 14px;
+			margin-top: 20px;
+			display: inline-flex;
+		}
+		.maintext {
+			font-size: 24px;
+			margin-top: 40px;
+			margin-bottom: 15px;
+			margin-left: 20px;
+		}
+		.table {
+			background-color: #fafafa;
+			width: 1500px;
+			padding-left: 60px;
+			padding-right: 60px;
+			padding: 10px;
+			align-content: center;
+			align-items: center;
+			height: 1150px;
+		}
+		.table a {
+			font-size: 13px;
+		}
+		article {
+			width: 350px;
+			height: 250px;
+			padding: 10px;
+			border-radius: 20px;
+			transition: .2s;
+			border-radius: 10px;
+			margin-right: 65px;
+			display: block;
+			margin-top: 20px;
+			padding-top: 25px;
+			text-align: center;
+			z-index: 99999999;
+			transition-delay: 0.4s;
+		}
+		article:hover {
+			height: 460px;
+			background: white;
+			box-shadow: -1px 19px 45px -20px rgba(0,0,0,0.75);
+			transform: translateY(-5px);
+			transition: 0.3s;
+			border-radius: 15px;
+			transition-delay: 0.6s;
+		}
+		aside {
+			display: flex;
+			margin-left: 10%;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		footer {
+			background: #fafafa;
+			display: block;
+			width: 100% !important;
+			margin-top: 490px;
+			position: absolute;
+			line-height: 1.7em;
+			transition: .5s;
+		}
+		.btn {
+			width: 170px;
+			height: 30px;
+			padding: 5px;
+			margin-left: 25%;
+			background: #fafafa;
+			border-radius: 20px;
+			transition: .3s;
+			padding-top: 7px;
+			border-radius: 10px;
+			margin-top: 15px !important;
+			display: block;
+			box-shadow: -1px 13px 35px -14px rgba(0,0,0,0.75);
+		}
+		.copyright {
+			line-height: 2.8em;
+		}
+		@media screen and (max-width: 1880px) {
+			.bottomitem {
+				padding: 0;
+				width: 1280px;
+				margin-right: 50px;
+				margin-left: 20%;
+				display: inline-flex;
+
+				}
+				.bottomram {
+				width: 700px;
+				height: 375px;
+				margin-top: 90px;
+				}
+				h1 {
+					height: 20px;
+					margin-left: 250px;
+				}
+		}
+		@media screen and (max-width: 1015px) {
+			.maintext {
+				font-size: 23px;
+				margin-bottom: 16px;
+				transition: 0.3s;
+				margin-left: 20px;
+			}
+		}
+		@media screen and (min-width: 436px, max-width: 528px) {
+			footer {
+			margin-top: 490px;
+			position: absolute;
+			}
+		}
+		@media screen and (min-width: 984px) {
+			footer {
+				margin-top: 50px;
+				transition: 0.5s;
+		}
+		}
+		span {
+			margin-right: 100px;
+		}
+		.gpuboard {
+			width: 286px;
+			height: 210px;
+			margin-top: 25px;
+		}	
+		.gpuboard1 {
+			width: 216px;
+			height: 210px;
+			margin-top: 25px;
+		}
+		.span {
+			margin-right: 15px;
+		}
+		.social {
+			width: 24px;
+			margin-top: -10px;
+			height: 24px;
+		}
+		@media screen and (max-width: 1366px) {
+		h1 {
+			margin: 0;
+			padding-left: 20px;
+		}
+		.btn {
+			text-align: center;
+		}
+		nav {
+			width: 1390px !important;
+		}
+		body {
+			overflow-x: hidden;
+		}
+		.table {
+			background-color: #fafafa;
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 20px;
+			padding: 10px;
+			align-content: center;
+			align-items: center;
+			}
+		aside {
+			margin-left: 40px;
+		}
+		article {
+			text-align: center;
+			width: 850px;
+			height: 250px;
+			padding: 10px;
+			border-radius: 20px;
+			transition: .3s;
+			border-radius: 10px;
+			margin-right: 25px;
+			display: block;
+			margin-top: 20px;
+			padding-top: 25px;
+			text-align: center;
+		}
+		main {
+			height: auto;
+			padding-left: 0px;
+			padding-right: 0px; 
+			display: block;
+			z-index: 200;
+		}
+		.folder {
+			margin-left: 90px;
+		}
+		.maintext {
+			margin-top: 5px;
+			margin-left: 90px;
+		}
+		.bottomitem {
+			margin: 0;
+			padding: 0;
+		}
+		.odd {
+			margin-left: 0;
+		}
+		.notebook_ram {
+			margin-left: 30px; 
+		}
+		.pcram {
+			margin-left: 3px;
+		}
+		.audio {
+			margin-left: 25px;
+		}
+		.desc {
+			text-align: left;
+		}
+		article {
+			text-align: left;
+		}
+		.name {
+			text-align: center;
+		}
+		}
+		.info {
+			opacity: 0;
+			transition: .1s;
+		}	
+		article:hover .info{
+			opacity: 1;
+			transition: 0.3s;
+			z-index: 1;
+			transition-delay: 1s;
+		}
+		.btn2 {
+			position: fixed;
+		}
+		.price {
+			color: #707070;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+			<li><a href="main.html"><img src="media/home.svg" align="middle">Главная</a></li>
+			<li><a href=""><img src="media/information-button.svg" align="middle">О магазине</a></li>
+			<li><a href=""><img src="media/payment-method.svg" align="middle">Оплата</a></li>
+			<li><a href=""><img src="media/delivery-truck.svg" align="middle">Доставка</a></li>
+			<li><a href=""><img src="media/location.svg" align="middle">Пункты выдачи</a></li>
+			<li><a href=""><img src="media/mace.svg" align="middle">Продать на нашем сайте</a></li>
+		</ul>
+	</nav>
+</header>
+	<main>
+		<div class="folder"><a href="main.html">Каталог товаров</a><p>→</p><a class="a" href="index.html">Комплектующие для ПК</a><p>→</p><a class="a" href="boards.html">Платы расширения - видео, звук, сеть</a><p>→</p><a class="a" href="">Видеокарты</a></div>
+		<h1 class="maintext">Видеокарты</h1>
+		<div class="table">
+			<aside>
+				<article>
+				<a href="gtx1070.html"><h1>Видеокарта MSI GTX 1070 ARMOR 8192MB</h1></a>
+				<a href="gtx1070.html"><img src="media/gtx1070.png" class="gpuboard"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>8ГБ GDDR5, Шина 256 бит, Частота ядра/памяти: 1632 МГц/8008 МГц, Разъемы для монитора: DVI 1 шт., HDMI 2 шт., DisplayPort 2 шт.</p>
+					<a href="gtx1070.html" class="btn">КУПИТЬ ЗА<h1 class="price">8 826 – 13 466 грн</h1></a></div>
+				</article>
+				<article>
+				<a href="rtx2080ti.html"><h1>Видеокарта MSI GeForce RTX 2080 Ti LIGHTNING Z 11264MB</h1></a>
+				<a href="rtx2080ti.html"><img src="media/msi2080.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 11264 Мб, Тип памяти: GDDR6, Шина памяти: 352 бит, Частота ядра/памяти: Boost: 1770 МГц/14000 МГц, Разъемы для монитора: DisplayPort x 3 (v1.4) / HDMI 2.0b x 1 / USB Type-C x1</p>
+					<a href="rtx2080ti.html" class="btn">КУПИТЬ ЗА<h1 class="price">43 318 грн</h1></a></div>
+				</article>
+				<article>
+				<a href="rtx1070.html"><h1>Видеокарта Inno3D GeForce RTX 2070 iChill X3 JEKYLL 8192MB</h1></a>
+				<a href="rtx2070.html"><img src="media/rtx2070.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 8192 Мб
+Тип памяти: GDDR6,
+Шина памяти: 256 бит,
+Частота ядра/памяти: Boost: 1815 МГц/14000 МГц,
+Разъемы для монитора: HDMI 2.0b, 3x DisplayPort 1.4, 1x USB-C</p>
+					<a href="rtx2070.html" class="btn">КУПИТЬ ЗА<h1 class="price">17 891 грн</h1></a></div>
+				</article>								
+			</aside>
+<aside>
+				<article>
+				<a href="gtx1660ti.html"><h1>Видеокарта MSI GeForce GTX 1660 Ti ARMOR OC 6144MB</h1></a>
+				<a href="gtx1660ti.html"><img src="media/gtx1660ti.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 6144 Мб
+Тип памяти: GDDR6
+Шина памяти: 192 бит
+Частота ядра/памяти: Boost 1860 МГц
+Разъемы для монитора: HDMI 1 шт., DisplayPort 3 шт.</p>
+					<a href="gtx1660ti.html" class="btn">КУПИТЬ ЗА<h1 class="price">9 777 грн</h1></a></div>
+				</article>
+				<article>
+				<a href="gigabyte_rtx2070.html"><h1>Видеокарта Gigabyte GeForce RTX 2070 Gaming OC 8192MB</h1></a>
+				<a href="gigabyte_rtx2070.html"><img src="media/gigabyte_rtx2070.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 8192 Мб
+Тип памяти: GDDR6
+Шина памяти: 256 бит
+Разъемы для монитора: DisplayPort x 3 (v1.4) / HDMI 2.0b x 1 / USB Type-C x 1</p>
+					<a href="gigabyte_rtx2070.html" class="btn">КУПИТЬ ЗА<h1 class="price">16 765 грн</h1></a></div>
+				</article>
+				<article>
+				<a href="gtx1070.html"><h1>Видеокарта MSI GeForce RTX 2070 ARMOR 8192MB</h1></a>
+				<a href="rtx2070.html"><img src="media/msirtx2070.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 8192 Мб
+Тип памяти: GDDR6
+Шина памяти: 256 бит
+Частота ядра/памяти: 1410 МГц/14000 МГц
+Разъемы для монитора: DisplayPort x 3 (v1.4) / HDMI 2.0b x 1 / USB Type-C x 1</p>
+					<a href="rtx2070.html" class="btn">КУПИТЬ ЗА<h1 class="price">16 026 грн</h1></a></div>
+				</article>								
+			</aside>
+<aside>
+				<article>
+				<a href="aorus2060.html"><h1>Видеокарта Gigabyte GeForce RTX 2060 AORUS XTREME</h1></a>
+				<a href="aorus2060.html"><img src="media/aorus2060.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 8192 Мб
+Объём памяти: 6144 Мб
+Тип памяти: GDDR6
+Шина памяти: 192 бит
+Частота ядра/памяти: 1845 МГц/14140 МГц
+Разъемы для монитора: 1x HDMI 2.0b, 3x DisplayPort 1.4, 1x USB-C</p>
+					<a href="aorus2060.html" class="btn">КУПИТЬ ЗА<h1 class="price">17 891 грн</h1></a></div>
+				</article>
+				<article>
+				<a href="rtx2080ti.html"><h1>Видеокарта Gigabyte GeForce RTX 2060 Gaming OC Pro 6144MB</h1></a>
+				<a href="rtx2080ti.html"><img src="media/gigabytertx2060.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 6144 Мб
+Тип памяти: GDDR6
+Шина памяти: 192 бит
+Частота ядра/памяти: 1830 МГц/14000 МГц
+Разъемы для монитора: 1x HDMI 2.0b, 3x DisplayPort 1.4</p>
+					<a href="rtx2080ti.html" class="btn">КУПИТЬ ЗА<h1 class="price">12 239 грн</h1></a></div>
+				</article>
+				<article>
+				<a href="gtx1070.html"><h1>Видеокарта Inno3D GeForce RTX 2070 X2 OC 8192MB</h1></a>
+				<a href="rtx2070.html"><img src="media/inno3d2070.png" class="gpuboard2"></a>
+				<div class="info"><h2>Краткие характеристики:</h2><p>Объём памяти: 8192 Мб
+Тип памяти: GDDR6
+Шина памяти: 256 бит
+Частота ядра/памяти: Boost : 1755 МГц/14000 МГц
+Разъемы для монитора: HDMI 1 шт., DisplayPort 1 шт., USB Type-C x 1</p>
+					<a href="rtx2070.html" class="btn">КУПИТЬ ЗА<h1 class="price">15 466 грн</h1></a></div>
+				</article>								
+			</aside>
+		</div>
+	</main>
+	<footer>
+		<div class="copyright">
+			<p align="center"><small>© Все права защищены. 2019.<span></span> <a href="https://vk.com/lil__debil" target="__blank"><img src="media/vk.png" class="social" align="middle"></a><span class="span"></span><a href="https://instagram.com/gay.shion" target="__blank"><img src="media/instagram.png" class="social" align="middle"></a></small></p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Каталог товаров</title>
+	<title>Звуковые карты</title>
 	<link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
 	<style type="text/css">
 		* {
@@ -74,7 +74,7 @@
 			padding: 10px;
 			align-content: center;
 			align-items: center;
-			height: 700px;
+			height: 1150px;
 		}
 		.table a {
 			font-size: 13px;
@@ -85,7 +85,6 @@
 			padding: 10px;
 			border-radius: 20px;
 			transition: .2s;
-			transition-delay: 0.4s;
 			border-radius: 10px;
 			margin-right: 65px;
 			display: block;
@@ -95,13 +94,13 @@
 			z-index: 99999999;
 		}
 		article:hover {
+			height: 460px;
 			background: white;
 			box-shadow: -1px 19px 45px -20px rgba(0,0,0,0.75);
 			transform: translateY(-5px);
 			transition: 0.3s;
 			border-radius: 15px;
-			height: 480px;
-			transition-delay: 0.2s;
+			transition-delay: 0.6s;
 		}
 		aside {
 			display: flex;
@@ -118,6 +117,20 @@
 			position: absolute;
 			line-height: 1.7em;
 			transition: .5s;
+		}
+		.btn {
+			width: 170px;
+			height: 30px;
+			padding: 5px;
+			margin-left: 25%;
+			background: #fafafa;
+			border-radius: 20px;
+			transition: .3s;
+			padding-top: 7px;
+			border-radius: 10px;
+			margin-top: 15px !important;
+			display: block;
+			box-shadow: -1px 13px 35px -14px rgba(0,0,0,0.75);
 		}
 		.copyright {
 			line-height: 2.8em;
@@ -162,26 +175,25 @@
 		}
 		}
 		span {
-			margin-right: 50px;
+			margin-right: 100px;
 		}
-		.periphery {
-			width: 320px;
-			height: 222px;
+		.gpuboard {
+			width: 286px;
+			height: 210px;
+			margin-top: 25px;
+		}	
+		.gpuboard1 {
+			width: 216px;
+			height: 210px;
+			margin-top: 25px;
 		}
-		.board {
-			width: 320px;
-			height: 222px;
+		.span {
+			margin-right: 15px;
 		}
 		.social {
 			width: 24px;
 			margin-top: -10px;
 			height: 24px;
-		}
-		.span {
-			margin-right: 15px;
-		}
-		.marginleft {
-			margin-right: 51px;
 		}
 		@media screen and (max-width: 1366px) {
 		nav {
@@ -198,17 +210,17 @@
 			padding: 10px;
 			align-content: center;
 			align-items: center;
-			height: 700px;
 			}
 		aside {
 			margin-left: 40px;
 		}
 		article {
+			text-align: center;
 			width: 850px;
 			height: 250px;
 			padding: 10px;
 			border-radius: 20px;
-			transition: .5s;
+			transition: .3s;
 			border-radius: 10px;
 			margin-right: 25px;
 			display: block;
@@ -256,30 +268,29 @@
 			text-align: center;
 		}
 		}
-		article:hover .info{
-			opacity: 1;
-			transition: 0.4s;
-			z-index: 1;
-			transition-delay: 0.6s;
-		}
 		.info {
 			opacity: 0;
-			transition: .1s;
-			text-align: left;
-			padding-top: 25px;
-			padding-left: 25px;
-
+			transition: .01s;
+		}	
+		article:hover .info{
+			opacity: 1;
+			transition: 0.3s;
+			z-index: 1;
+			transition-delay: 1s;
 		}
-		.info h1 {
-			padding-top: 3px;
-		}		
+		.btn2 {
+			position: fixed;
+		}
+		.price {
+			color: #707070;
+		}
 	</style>
 </head>
 <body>
 	<header>
 	<nav>
 		<ul>
-			<li><a href="javascript:alert('вы уже тут');"><img src="media/home.svg" align="middle">Главная</a></li>
+			<li><a href="main.html"><img src="media/home.svg" align="middle">Главная</a></li>
 			<li><a href=""><img src="media/information-button.svg" align="middle">О магазине</a></li>
 			<li><a href=""><img src="media/payment-method.svg" align="middle">Оплата</a></li>
 			<li><a href=""><img src="media/delivery-truck.svg" align="middle">Доставка</a></li>
@@ -289,19 +300,9 @@
 	</nav>
 </header>
 	<main>
-		<div class="folder"><a href="main.html">Каталог товаров</a><p>→</p></div>
-		<h1 class="maintext">Каталог товаров</h1>
+		<div class="folder"><a href="main.html">Каталог товаров</a><p>→</p><a class="a" href="index.html">Комплектующие для ПК</a><p>→</p><a class="a" href="boards.html">Платы расширения - видео, звук, сеть</a><p>→</p><a class="a" href="">Звуковые карты</a></div>
+		<h1 class="maintext">Звуковые карты</h1>
 		<div class="table">
-			<aside>
-				<article>
-				<a href="index.html">Комплектующие для ПК</a><a href="index.html"><img src="media/supplies.png" class="board"></a><div class="info"><h1>Процессоры</h1><h1>Видеокарты</h1><h1>Материнские платы</h1><h1>Корпуса, блоки питания</h1><h1>Куллера, водяное охлаждение</h1><h1>Оперативная память</h1><h1>Накопительные устройства</h1></div>
-				</article>
-				<article>
-				<a href="periphery.html">Периферия</a><a href="periphery.html"><img src="media/periphery.png" class="periphery"></a><div class="info">
-					<h1>Мышки</h1><h1>Клавиатуры</h1><h1>Мониторы</h1>
-				</div>
-				</article>				
-			</aside>
 		</div>
 	</main>
 	<footer>
@@ -309,9 +310,5 @@
 			<p align="center"><small>© Все права защищены. 2019.<span></span> <a href="https://vk.com/lil__debil" target="__blank"><img src="media/vk.png" class="social" align="middle"></a><span class="span"></span><a href="https://instagram.com/gay.shion" target="__blank"><img src="media/instagram.png" class="social" align="middle"></a></small></p>
 		</div>
 	</footer>
-	<script>
-
-
-	</script>
 </body>
 </html>

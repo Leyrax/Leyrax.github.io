@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Каталог товаров</title>
+	<title>Периферия</title>
 	<link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
 	<style type="text/css">
 		* {
@@ -81,18 +81,16 @@
 		}
 		article {
 			width: 350px;
-			height: 250px;
+			height: 260px;
 			padding: 10px;
 			border-radius: 20px;
-			transition: .2s;
-			transition-delay: 0.4s;
+			transition: .3s;
 			border-radius: 10px;
 			margin-right: 65px;
 			display: block;
 			margin-top: 20px;
 			padding-top: 25px;
 			text-align: center;
-			z-index: 99999999;
 		}
 		article:hover {
 			background: white;
@@ -100,8 +98,6 @@
 			transform: translateY(-5px);
 			transition: 0.3s;
 			border-radius: 15px;
-			height: 480px;
-			transition-delay: 0.2s;
 		}
 		aside {
 			display: flex;
@@ -204,11 +200,11 @@
 			margin-left: 40px;
 		}
 		article {
-			width: 850px;
+			width: 350px;
 			height: 250px;
 			padding: 10px;
 			border-radius: 20px;
-			transition: .5s;
+			transition: .3s;
 			border-radius: 10px;
 			margin-right: 25px;
 			display: block;
@@ -256,22 +252,17 @@
 			text-align: center;
 		}
 		}
-		article:hover .info{
-			opacity: 1;
-			transition: 0.4s;
-			z-index: 1;
-			transition-delay: 0.6s;
+		.mousepic {
+			width: 300px;
+			height: 300px;
 		}
-		.info {
-			opacity: 0;
-			transition: .1s;
-			text-align: left;
-			padding-top: 25px;
-			padding-left: 25px;
-
+		.keyboard {
+			width: 300px;
+			height: 190px;			
 		}
-		.info h1 {
-			padding-top: 3px;
+		.monitorpic {
+			width: 280px;
+			height: 220px;
 		}		
 	</style>
 </head>
@@ -279,7 +270,7 @@
 	<header>
 	<nav>
 		<ul>
-			<li><a href="javascript:alert('вы уже тут');"><img src="media/home.svg" align="middle">Главная</a></li>
+			<li><a href="main.html"><img src="media/home.svg" align="middle">Главная</a></li>
 			<li><a href=""><img src="media/information-button.svg" align="middle">О магазине</a></li>
 			<li><a href=""><img src="media/payment-method.svg" align="middle">Оплата</a></li>
 			<li><a href=""><img src="media/delivery-truck.svg" align="middle">Доставка</a></li>
@@ -289,18 +280,22 @@
 	</nav>
 </header>
 	<main>
-		<div class="folder"><a href="main.html">Каталог товаров</a><p>→</p></div>
-		<h1 class="maintext">Каталог товаров</h1>
+		<div class="folder"><a href="main.html">Каталог товаров</a><p>→</p><a href="">Периферия</a></div>
+		<h1 class="maintext">Периферия</h1>
 		<div class="table">
 			<aside>
 				<article>
-				<a href="index.html">Комплектующие для ПК</a><a href="index.html"><img src="media/supplies.png" class="board"></a><div class="info"><h1>Процессоры</h1><h1>Видеокарты</h1><h1>Материнские платы</h1><h1>Корпуса, блоки питания</h1><h1>Куллера, водяное охлаждение</h1><h1>Оперативная память</h1><h1>Накопительные устройства</h1></div>
-				</article>
-				<article>
-				<a href="periphery.html">Периферия</a><a href="periphery.html"><img src="media/periphery.png" class="periphery"></a><div class="info">
-					<h1>Мышки</h1><h1>Клавиатуры</h1><h1>Мониторы</h1>
-				</div>
-				</article>				
+				<a href="mouse.html">Компьютерные мышки</a>
+				<div class="picturetext"><a href="mouse.html"><img src="media/mouse.jpg" class="mousepic"></a></div>
+			</article>
+		<article>
+				<a href="keyboard.html">Клавиатуры</a>
+				<div class="picturetext"><a href="keyboard.html"><img src="media/keyboard.png" class="keyboardpic"></a></div>
+			</article>
+		<article>
+				<a href="monitor.html">Мониторы</a>
+				<div class="picturetext"><a href="monitor.html"><img src="media/monitor.png" class="monitorpic"></a></div>
+			</article>
 			</aside>
 		</div>
 	</main>
