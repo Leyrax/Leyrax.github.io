@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Магазин</title>
+	<link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		nav {
+			border-bottom: 1px solid;
+			padding-bottom: 5px;
+			display: flex;
+			width: 1920px !important;
+			height: 35px auto;
+			line-height: 0.8em;
+			background: #fafafa;
+			padding-top: 5px;
+		}
+		ul li {
+			display: inline-flex;
+			padding-right: 20px;
+			padding-top: 5px;
+		}
+		a {
+			color: #707070;
+			text-decoration: none;
+			transition: .5s;
+		}
+		li:nth-child(1) {
+			padding-left: 240px;
+		}
+		li {
+			padding-right: 20px;
+		}
+		a:hover {
+			color: silver;
+			transition: 0.1s;
+		}
+		main {
+			height: auto;
+			padding-left: 240px;
+			padding-right: 240px; 
+			display: block;
+			z-index: 200;
+		}
+		ul li img {
+			width: 15px;
+			height: 15px;
+			padding-bottom: 10px;
+			padding-right: 5px;
+		}
+		li a {
+			font-size: 15px;
+		}
+		.folder {
+			font-size: 14px;
+			margin-top: 20px;
+			display: inline-flex;
+		}
+		.maintext {
+			font-size: 24px;
+			margin-top: 40px;
+			margin-bottom: 15px;
+		}
+		.table {
+			background-color: #fafafa;
+			width: 1500px;
+			padding-left: 60px;
+			padding-right: 60px;
+			padding: 10px;
+			align-content: center;
+			align-items: center;
+			height: 700px;
+		}
+		.table a {
+			font-size: 13px;
+		}
+		article {
+			width: 350px;
+			height: 250px;
+			padding: 10px;
+			border-radius: 20px;
+			transition: .3s;
+			border-radius: 10px;
+			margin-right: 20px;
+			display: block;
+			margin-top: 20px;
+			padding-top: 25px;
+			text-align: center;
+		}
+		article:hover {
+			background: white;
+			box-shadow: -1px 19px 45px -20px rgba(0,0,0,0.75);
+			transform: translateY(-5px);
+			transition: 0.3s;
+			border-radius: 15px;
+		}
+		aside {
+			display: flex;
+			margin-left: 10%;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.bottom {
+
+		}
+		.secondarticles {
+			width: 250px;
+			height: 250px;
+			padding: 10px;
+			border-radius: 20px;
+			transition: .3s;
+			border-radius: 10px;
+			margin-right: 20px;
+			display: block;
+			margin-top: 20px;
+			padding-top: 25px;
+			text-align: center;
+		}
+		.thirdarticles {
+			width: 300px;
+			height: 250px;
+			padding: 10px;
+			border-radius: 20px;
+			transition: .3s;
+			border-radius: 10px;
+			margin-right: 20px;
+			display: block;
+			margin-top: 20px;
+			padding-top: 25px;
+			text-align: center;
+		}
+		.graphic_card {
+			width: 157px;
+			height: 101px;
+		}
+		.textpicture {
+			margin-top: 20px;
+			padding-left: 20px;
+			text-align: left;
+		}
+		.classname {
+			padding-left: 30px;
+		}
+		.classname1 {
+			padding-left: 30px;
+			margin-top: 20px;
+		}
+		.audio {
+			padding-right: 20px;
+		}
+		.ethernet {
+			padding-left: 25px;
+		}
+		.ram {
+			width: 172px;
+			height: 172px;
+		}
+		.textpicture2 {
+			margin-top: 20px;
+			padding-left: 20px;
+			text-align: left;
+		}
+		.textpicture3 {
+			margin-top: 20px;
+			padding-left: 50px;
+			text-align: left;
+		}
+		.textpicture4 {
+			margin-top: 20px;
+			padding-left: 75px;
+			text-align: left;
+		}
+		.textpicture5 {
+			margin-top: 20px;
+			padding-left: 55px;
+			text-align: left;
+		}		
+		.pcram {
+			padding-left: 23px;
+		}
+		.notebook_ram {
+			margin-left: -13px;
+		}
+		.strage {
+			width: 150px;
+			height: 150px;
+		}
+		.ssd {
+			margin-left: -15px;
+		}
+		.odd {
+			margin-left: -46px;
+		}
+		.cpu {
+			width: 150px;
+			height: 150px;
+		}
+		.cooler {
+			width: 222px;
+			height: 128px;
+		}
+		.bottomram {
+			width: 600px;
+			height: 375px;
+			margin-top: 50px;
+			display: block;
+		}
+		.bottomitem {
+			margin-top: 90px;
+			display: block;
+			margin-bottom: 70px;
+		}
+		.desc {
+			margin-top: 70px;
+		}
+		.desctext {
+			padding-top: 5px;
+		}
+		footer {
+			background: #fafafa;
+			display: block;
+			width: 1920px !important;
+			margin-top: 490px;
+			position: absolute;
+			line-height: 1.7em;
+			transition: .5s;
+		}
+		.copyright {
+			line-height: 2.8em;
+		}
+		@media screen and (max-width: 1880px) {
+			.bottomitem {
+				padding: 0;
+				width: 1280px;
+				margin-right: 50px;
+				margin-left: 20%;
+				display: inline-flex;
+
+				}
+				.bottomram {
+				width: 700px;
+				height: 375px;
+				margin-top: 90px;
+				}
+				h1 {
+					height: 20px;
+					margin-left: 250px;
+				}
+		}
+		@media screen and (max-width: 1015px) {
+			.maintext {
+				font-size: 23px;
+				margin-bottom: 36px;
+				transition: 0.3s;
+			}
+		}
+		@media screen and (min-width: 436px, max-width: 528px) {
+			footer {
+			margin-top: 490px;
+			position: absolute;
+			}
+		}
+		@media screen and (min-width: 984px) {
+			footer {
+				margin-top: 50px;
+				transition: 0.5s;
+		}
+		}	
+	</style>
+</head>
+<body>
+	<header>
+	<nav>
+		<ul>
+			<li><a href="javascript:alert('вы уже тут');"><img src="media/home.svg" align="middle">Главная</a></li>
+			<li><a href=""><img src="media/information-button.svg" align="middle">О магазине</a></li>
+			<li><a href=""><img src="media/payment-method.svg" align="middle">Оплата</a></li>
+			<li><a href=""><img src="media/delivery-truck.svg" align="middle">Доставка</a></li>
+			<li><a href=""><img src="media/location.svg" align="middle">Пункты выдачи</a></li>
+			<li><a href=""><img src="media/mace.svg" align="middle">Продать на нашем сайте</a></li>
+		</ul>
+	</nav>
+</header>
+	<main>
+		<div class="folder"><a href="#">Каталог товаров</a> → <a href="">Комплектующие</a></div>
+		<h1 class="maintext">Комплектующие для ПК</h1>
+		<div class="table">
+			<aside>
+				<article>
+					<a href="" align="center">Платы расширения - видео, звук, сеть</a>
+					<div class="textpicture">
+					<img alt="RTX 2070"src="media/gpu.png" class="graphic_card" align="left"><a href="items/gpu.html" class="classname">Видеокарты</a></div>
+					<a href="items/audio.html" class="audio">Звуковые карты</a>
+					<a href="items/ethernet_cards.html" class="ethernet">Сетевые карты Ethernet</a>
+				</article>
+				<article>
+					<a href="ram.html" align="center" class="classname">Модули памяти - для сервера, пк, ноутбука</a>
+					<div class="textpicture2">
+					<a href="items/server_ram.html" class="classname1">Для сервера</a><img src="media/ram.png" class="ram" align="left"></div>
+					<a href="pc_ram.html" class="pcram">Для настольного ПК</a>
+					<a href="notebook_ram.html" class="notebook_ram" align='left'>Для ноутбука</a>
+				</article>
+				<article>
+					<a href="items/storage.html" class="classname" align="center">HDD, SSD, ODD</a>
+					<div class="textpicture2">
+						<img src="media/hdd.png" class="strage" align="left"><a href="items/hdd.html">Жесткие диски</a>
+					</div>
+					<a href="items/ssd.html" class="ssd" align="left">Твердотельные накопители</a>
+					<a href="items/odd.html" class="odd" align="left">Оптические приводы</a>
+			</article>
+				</aside>
+			<aside class="bottom">
+				<article class="secondarticles">
+					<a href="items/cpu.html" align="center">Процессоры</a>
+					<div class="textpicture3">
+						<img align="center" src="media/cpu.png" class="cpu">
+					</div>
+				</article>
+				<article class="secondarticles">
+					<a href="items/motherboards.html" align="center">Материнские платы</a>
+					<div class="textpicture3">
+						<img src="media/motherboard.png" class="cpu">
+				</div>	
+				</article>
+				<article class="thirdarticles">
+					<a href="items/ps_cases.html" align="center">Блоки питания, корпуса</a>
+					<div class="textpicture4">
+						<img src="media/case.png" class="cpu">
+					</div>
+				</article>
+				<article class="thirdarticles">
+					<a href="items/cooler.html" align="center">Водяное охлаждение, куллеры</a>
+					<div class="textpicture5">
+						<img src="media/nzxt.png" class="cooler">
+					</div>
+				</article>				
+			</aside>
+		</div>
+		<div class="bottomitem">
+			<h1 align="center">ВЫБОР МНОГИХ ПОЛЬЗОВАТЕЛЕЙ</h1>
+			<img src="media/bottomram.jpeg" class="bottomram" align="left">
+			<div class="desc">
+			<h2 align="right" class="desctext">HyperX FURY Red 16GB<br> (2x8GB) 1866MHz DDR3 RAM</h2>
+			<h2 align="right" class="desctext">Характеристики:</h2>
+			<h2 align="right" class="desctext">Вольтаж: 1.5V</h2>
+			<h2 align="right" class="desctext">Тайминги: CL10</h2>
+			<h2 align="right" class="desctext">Частота: 1866MHz (PC3-15000)</h2>
+			<h2 align="right" class="desctext">2 x 8GB DIMM Dual Channel Kit</h2>
+			<h2 align="right" class="desctext">Поддержка Intel XMP профиля</h2>
+			<h2 align="right" class="desctext">non-ECC Unbuffered Memory</h2>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="copyright">
+			<p align="center"><small>© Все права защищены. 2019. Автор: <a href="https://vk.com/lil__debil" target="__blank">Коля Лен</a></small></p>
+		</div>
+	</footer>
+</body>
+</html>
